@@ -10,7 +10,9 @@ public class Point {
         double d = Math.sqrt(summ);
         return d;
     }
+
     public static void main(String[] args) {
+
         double result = Point.distance(3, 2, 5, 3);
         System.out.println("result (3, 2) to (5, 3) " + result);
     }
