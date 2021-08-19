@@ -15,6 +15,6 @@ public class Counter {
         System.out.println(sum(1, 1));
         System.out.println(sum(4, 8));
         System.out.println(sum(11, 5));
-        System.out.println(sum(21, 42));
+        System.out.println(sum(22, 42));
     }
 }
