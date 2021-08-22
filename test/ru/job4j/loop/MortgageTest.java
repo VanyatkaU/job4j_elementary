@@ -24,3 +24,4 @@ public class MortgageTest {
         Assert.assertEquals(expected, result);
     }
 }
+
