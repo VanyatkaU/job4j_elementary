@@ -34,4 +34,3 @@ public class MinDiapasonTest {
         Assert.assertEquals(expected, result);
     }
 }
-
