@@ -22,4 +22,23 @@ public class MatrixCheck {
         }
         return result;
     }
+
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (char cell = 0; cell < board.length; cell++) {
+            rsl[cell] = board[cell][cell];
+        }
+        return rsl;
+    }
+
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        for (char cell = 0; cell < board.length; cell++) {
+            if (monoHorizontal(board, cell) || monoVertical(board, cell)) {
+                result = true;
+                break;
+            }
+        }
+        return result;
+    }
 }
