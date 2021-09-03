@@ -34,3 +34,4 @@ public class SwitchArrayTest {
         Assert.assertArrayEquals(expected, result);
     }
 }
+
