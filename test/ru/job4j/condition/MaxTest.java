@@ -7,38 +7,50 @@ import org.junit.Assert;
 public class MaxTest {
 
     @Test
-    public void whenMax1To2Then2() {
-        int left = 1;
-        int right = 2;
-        int result = Max.max(left, right);
-        int expected = 2;
-        Assert.assertEquals(result, expected);
-    }
-
-    @Test
     public void firstMax() {
-        int left = 2;
-        int right = 1;
-        int result = Max.max(left, right);
+        int first = 2;
+        int second = 1;
+        int result = Max.max(first, second);
         int expected = 2;
         Assert.assertEquals(result, expected);
     }
 
     @Test
     public void secondMax() {
-        int left = 1;
-        int right = 2;
-        int result = Max.max(left, right);
+        int first = 1;
+        int second = 2;
+        int result = Max.max(first, second);
         int expected = 2;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void leftEquallyRight() {
-        int left = 2;
-        int right = 2;
-        int result = Max.max(left, right);
+    public void firstEquallySecond() {
+        int first = 2;
+        int second = 2;
+        int result = Max.max(first, second);
         int expected = 2;
+        Assert.assertEquals(result, expected);
+    }
+
+    @Test
+    public void thirdMax() {
+        int first = 0;
+        int second = 2;
+        int third = 5;
+        int result = Max.max(first, second, third);
+        int expected = 5;
+        Assert.assertEquals(result, expected);
+    }
+
+    @Test
+    public void fourthdMax() {
+        int first = 0;
+        int second = -1;
+        int third = 2;
+        int fourth = 3;
+        int result = Max.max(first, second, third, fourth);
+        int expected = 3;
         Assert.assertEquals(result, expected);
     }
 }
