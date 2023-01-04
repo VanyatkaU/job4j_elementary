@@ -32,6 +32,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.12</version>
+        </dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.9.0</version>
@@ -74,11 +79,6 @@
                         <groupId>com.puppycrawl.tools</groupId>
                         <artifactId>checkstyle</artifactId>
                         <version>9.0</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.postgresql</groupId>
-                        <artifactId>postgresql</artifactId>
-                        <version>42.2.12</version>
                     </dependency>
                 </dependencies>
                 <executions>
@@ -124,7 +124,7 @@
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <version>4.15.0</version>
                 <configuration>
-                    <propertyFile>${liquibase.config}</propertyFile>
+                    <propertyFile>db/liquibase.properties</propertyFile>
                 </configuration>
                 <executions>
                     <execution>
