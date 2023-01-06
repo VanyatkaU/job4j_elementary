@@ -5,10 +5,11 @@ public class JavaNameValidator {
     public static boolean isNameValid(String name) {
         boolean valid = false;
         if (!isEmpty(name) && isLowerLatinLetter(name.codePointAt(0))) {
-            for (int i = 0; i < name.length(); i++) {
+            for (int i = 1; i < name.length(); i++) {
                 int code = name.codePointAt(i);
                 valid = isDigit(code) || isLowerLatinLetter(code)
                         || isSpecialSymbol(code) || isUpperLatinLetter(code);
+                break;
             }
         }
         return valid;
